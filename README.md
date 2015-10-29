@@ -1,23 +1,17 @@
 cog_samhain Cookbook
 ====================
-TODO: Enter the cookbook description here.
+This cookbook installs samhain from source that is included into
+cookbook.
 
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+When you want to upgrade samhain, add new source as file and
+update version in attributes.
 
+Tested on Amazon Linux, should work also on Centos
 Requirements
 ------------
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-#### packages
-- `toaster` - cog_samhain needs toaster to brown your bagel.
 
 Attributes
 ----------
-TODO: List your cookbook attributes here.
-
-e.g.
 #### cog_samhain::default
 <table>
   <tr>
@@ -27,19 +21,17 @@ e.g.
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>['cog_samhain']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
+    <td><tt>['cog_samhain']['version']</tt></td>
+    <td>String</td>
+    <td>Samhain version number</td>
+    <td><tt>"4.1.0"</tt></td>
   </tr>
 </table>
 
 Usage
 -----
 #### cog_samhain::default
-TODO: Write usage instructions for each cookbook.
 
-e.g.
 Just include `cog_samhain` in your node's `run_list`:
 
 ```json
@@ -51,18 +43,14 @@ Just include `cog_samhain` in your node's `run_list`:
 }
 ```
 
-Contributing
-------------
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
+#### Things to know
 
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+All binary paths and database paths are default, as configure/compile
+sets them.
 
-License and Authors
--------------------
-Authors: TODO: List authors
+On install it will init samhain database and start samhain.
+
+Currently logs go only to syslog.
+
+Currently there is no way to specify machine specific configuration, there is
+just configuration file as a file in files/default directory
