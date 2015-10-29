@@ -50,6 +50,15 @@ sets them.
 
 On install it will init samhain database and start samhain.
 
+updating samhain database can be done this way:
+
+    samhain -t update --foreground
+
+And then send HUP to currently running samhain or reload samhain service.
+
+Samhain can monitor growing log files (checksumming to last known file size),
+if we use this feature, we should update database rather often. 
+
 Currently logs go only to syslog.
 
 Currently there is no way to specify machine specific configuration, there is
