@@ -185,7 +185,9 @@ dir = -1/var/lib/dhclient
 
 dir = /var/lib/nfs
 dir = /var/lib/pcmcia
-dir = /var/lib/clamav
+dir = 5/var/lib/clamav
+dir = 5/var/lib/mysql
+dir = 99/var/lib/mongodb
 
 # /var/lib/rpm changes if packets are installed;
 # /var/lib/rpm/__db.00[123] even more frequently
@@ -204,9 +206,7 @@ file = /var/lib/gdm/.gdmfifo
 file = /var/lib/gdm/:0.Xauth
 file = /var/lib/gdm/:0.Xservers
 file = /var/lib/logrotate/status
-file = /var/lib/mysql
-file = /var/lib/mysql/ib_logfile0
-file = /var/lib/mysql/ibdata1
+
 file = /var/lib/slocate
 file = /var/lib/slocate/slocate.db
 file = /var/lib/slocate/slocate.db.tmp
