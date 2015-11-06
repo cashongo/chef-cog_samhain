@@ -49,6 +49,7 @@ cookbook_file '/etc/samhainrc' do
   owner 'root'
   group 'root'
   mode '0600'
+  notifies :run,'execute[reload-samhain]',:delayed
 end
 
 file "/etc/init.d/samhain" do
@@ -68,4 +69,10 @@ end
 service "samhain" do
   service_name "samhain"
   action [:enable, :start]
+end
+
+execute "reload-samhain" do
+  action :nothing
+  command '/usr/local/sbin/samhain reload'
+  returns [0,7]
 end
