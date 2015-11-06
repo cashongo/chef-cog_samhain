@@ -3,6 +3,7 @@
 # Configuration file template for samhain.
 #
 #####################################################################
+
 #
 # -- empty lines and lines starting with '#', ';' or '//' are ignored
 # -- boolean options can be Yes/No or True/False or 1/0
@@ -456,7 +457,7 @@ SyslogSeverity=mark
 ## (this is not honoured on database initialisation)
 #
 # Daemon = no
-Daemon = no
+Daemon = yes
 
 ## whether to test signature of files (init/check/none)
 ## - if 'none', then we have to decide this on the command line -
