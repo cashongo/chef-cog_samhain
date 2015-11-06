@@ -180,13 +180,13 @@ dir = -1/var/lib/scrollkeeper
 dir = -1/var/chef/cache
 dir = -1/var/chef/backup
 dir = -1/var/lib/dhclient
+dir = -1/var/lib/mysql
 
 [Attributes]
 
 dir = /var/lib/nfs
 dir = /var/lib/pcmcia
 dir = 5/var/lib/clamav
-dir = 5/var/lib/mysql
 dir = 99/var/lib/mongodb
 
 # /var/lib/rpm changes if packets are installed;
