@@ -182,6 +182,7 @@ dir = -1/var/chef/cache
 dir = -1/var/chef/backup
 dir = -1/var/lib/dhclient
 dir = -1/var/lib/mysql
+dir = -1/var/lib/fail2ban
 
 [Attributes]
 
