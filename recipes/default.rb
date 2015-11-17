@@ -20,7 +20,7 @@ execute 'Extract samhain source' do
   not_if {  ::File.exists?("/root/samhain-#{node['cog_samhain']['samhain_version']}/configure") }
 end
 
-['gcc','make','libattr-devel','libacl-devel','pcre-devel','audit-libs-devel','zlib-devel'].each do |pkg|
+node['cog_samhain']['packages'].each do |pkg|
   package pkg
 end
 
