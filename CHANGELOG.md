@@ -1,3 +1,6 @@
+### 0.1.3
+- Make it work on ubuntu
+
 ### 0.1.2
 - remove fail2ban from samhain
 
