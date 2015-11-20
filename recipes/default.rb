@@ -35,16 +35,24 @@ template "/root/samhain_build_options" do
   notifies :create,"file[rebuild_samhain]",:immediately
 end
 
+file "rebuild_samhain" do
+  action :nothing
+  owner "root"
+  group "root"
+  mode "0600"
+  path "/root/rebuild_samhain"
+end
+
 execute 'Configure Samhain Server source' do
   cwd "/root/samhain-#{node['cog_samhain']['samhain_version']}"
-  command "./configure --enable-logfile-monitor --enable-process-check --enable-login-watch  --enable-port-check --enable-db-reload"
-  not_if { File.exists?("/root/samhain-#{node['cog_samhain']['samhain_version']}/config.log")}
+  command "./configure #{node['cog_samhain']['samhain_build_options']}"
+  not_if { File.exists?("/root/samhain-#{node['cog_samhain']['samhain_version']}/config.log") && !File.exists?('/root/rebuild_samhain') }
 end
 
 execute 'Build samhain' do
   cwd "/root/samhain-#{node['cog_samhain']['samhain_version']}"
   command 'make'
-  not_if { File.exists?("/root/samhain-#{node['cog_samhain']['samhain_version']}/samhain")}
+  not_if { File.exists?("/root/samhain-#{node['cog_samhain']['samhain_version']}/samhain") && !File.exists?('/root/rebuild_samhain') }
 end
 
 execute 'Install samhain' do
@@ -52,6 +60,7 @@ execute 'Install samhain' do
   command 'make install'
   environment ({ 'LC_ALL' => 'POSIX'})
   not_if { File.exists?("/usr/local/sbin/samhain") && FileUtils.identical?("/usr/local/sbin/samhain","/root/samhain-#{node['cog_samhain']['samhain_version']}/samhain")}
+  notifies :restart,'service[samhain]',:delayed
 end
 
 cookbook_file '/etc/samhainrc' do
@@ -86,4 +95,12 @@ execute "reload-samhain" do
   action :nothing
   command '/usr/local/sbin/samhain reload'
   returns [0,7]
+end
+
+file "rebuild_samhain" do
+  action :delete
+  owner "root"
+  group "root"
+  mode "0600"
+  path "/root/rebuild_samhain"
 end
