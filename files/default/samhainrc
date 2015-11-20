@@ -30,6 +30,38 @@
 #
 #####################################################################
 
+[UserFiles]
+#
+# Activate (0 is off).
+#
+UserfilesActive=1
+
+#
+# Files to check for under each $HOME
+# A specific level can be specified.
+# The allowed values are:
+# allignore
+# attributes
+# logfiles
+# loggrow
+# noignore
+# readonly
+# user0
+# user1
+# user2
+# user3
+# user4
+#
+# The default is noignore
+#
+#UserfilesName=.login noignore
+#UserfilesName=.profile readonly
+UserfilesName=.ssh/authorized_keys noignore
+#
+# A list of UIDs where we want to check.
+# The default is all.
+# IF THERE IS AN OPEN RANGE, IT MUST BE LAST
+#
 #####################################################################
 #
 # Files are defined with: file = /absolute/path
