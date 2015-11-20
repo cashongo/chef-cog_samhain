@@ -62,6 +62,7 @@ UserfilesName=.ssh/authorized_keys noignore
 # The default is all.
 # IF THERE IS AN OPEN RANGE, IT MUST BE LAST
 #
+#UserfilesCheckUids=0,100-500,1000-
 #####################################################################
 #
 # Files are defined with: file = /absolute/path
@@ -215,6 +216,9 @@ dir = -1/var/chef/backup
 dir = -1/var/lib/dhclient
 dir = -1/var/lib/mysql
 dir = -1/var/lib/fail2ban
+dir = -1/var/lib/ntp
+dir = -1/var/lib/nginx/tmp
+dir = -1/var/lib/yum
 
 [Attributes]
 
@@ -249,6 +253,7 @@ file = /var/lib/urandom/random-seed
 file = /var/lib/random-seed
 file = /var/lib/xkb
 file = /var/log/mail/statistics
+file = /var/log/lastlog
 
 [GrowingLogFiles]
 ##
