@@ -1,3 +1,9 @@
+### 0.1.4
+- Remove NTP dir
+- Remove nginx tmp
+- Add user file monitoring
+- possibility to trigger reinstall
+
 ### 0.1.3
 - Make it work on ubuntu
 

@@ -57,9 +57,11 @@ updating samhain database can be done this way:
 And then send HUP to currently running samhain or reload samhain service.
 
 Samhain can monitor growing log files (checksumming to last known file size),
-if we use this feature, we should update database rather often. 
+if we use this feature, we should update database rather often.
 
 Currently logs go only to syslog.
 
 Currently there is no way to specify machine specific configuration, there is
 just configuration file as a file in files/default directory
+
+In order to rebuild samhain, do ```touch /root/rebuild_samhain```
