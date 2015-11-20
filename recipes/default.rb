@@ -24,6 +24,17 @@ node['cog_samhain']['packages'].each do |pkg|
   package pkg
 end
 
+template "/root/samhain_build_options" do
+  owner "root"
+  group "root"
+  mode "0644"
+  source "oneliner.erb"
+  variables({
+    :line => node['cog_samhain']['samhain_build_options']
+    })
+  notifies :create,"file[rebuild_samhain]",:immediately
+end
+
 execute 'Configure Samhain Server source' do
   cwd "/root/samhain-#{node['cog_samhain']['samhain_version']}"
   command "./configure --enable-logfile-monitor --enable-process-check --enable-login-watch  --enable-port-check --enable-db-reload"
