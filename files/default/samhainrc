@@ -522,11 +522,11 @@ SetLoopTime = 600
 ## Interval between file checks
 #
 # SetFileCheckTime = 600
-SetFileCheckTime = 7200
+#SetFileCheckTime = 7200
 
 ## Alternative: crontab-like schedule
 #
-# FileCheckScheduleOne = NULL
+FileCheckScheduleOne = 1 1 * * *
 
 ## Alternative: crontab-like schedule(2)
 #
