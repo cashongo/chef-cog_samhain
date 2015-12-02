@@ -219,6 +219,7 @@ dir = -1/var/lib/fail2ban
 dir = -1/var/lib/ntp
 dir = -1/var/lib/nginx/tmp
 dir = -1/var/lib/yum
+dir = -1/var/log/suricata_ips
 
 [Attributes]
 
