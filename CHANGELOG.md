@@ -1,3 +1,6 @@
+### 0.1.5
+- Change samhain to check files once a day
+
 ### 0.1.4
 - Remove NTP dir
 - Remove nginx tmp
