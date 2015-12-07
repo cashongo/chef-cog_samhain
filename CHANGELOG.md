@@ -1,3 +1,7 @@
+### 0.1.5
+- Change samhain to check files once a day
+- Do not check suricata's eve.json
+
 ### 0.1.4
 - Remove NTP dir
 - Remove nginx tmp
