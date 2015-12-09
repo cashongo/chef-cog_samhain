@@ -130,6 +130,7 @@ file = /etc/mtab
 file = /etc/adjtime
 file = /etc/motd
 file = /etc/lvm/.cache
+file = /etc/ld.so.cache
 
 # On Ubuntu, these are in /var/lib rather than /etc
 file = /etc/cups/certs
@@ -145,6 +146,9 @@ file = /etc/sysconfig/hwconf
 # timestamps. Put it here as 'file', and in the ReadOnly section as 'dir'.
 
 file = /etc
+
+[IgnoreAll]
+file = /etc/ld.so.cache~
 
 #
 # --------- /boot -----------
@@ -220,12 +224,13 @@ dir = -1/var/lib/ntp
 dir = -1/var/lib/nginx/tmp
 dir = -1/var/lib/yum
 dir = -1/var/log/suricata_ips
+dir = -1/var/lib/clamav
+dir = -1/var/lib/NetworkManager
 
 [Attributes]
 
 dir = /var/lib/nfs
 dir = /var/lib/pcmcia
-dir = 5/var/lib/clamav
 dir = 99/var/lib/mongodb
 
 # /var/lib/rpm changes if packets are installed;
