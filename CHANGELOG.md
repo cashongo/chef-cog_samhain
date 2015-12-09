@@ -1,3 +1,8 @@
+### 0.1.6
+- do not check /etc/ld.so.cache
+- do not check /var/lib/clamav
+- do not check /var/lib/NetworkManager
+
 ### 0.1.5
 - Change samhain to check files once a day
 - Do not check suricata's eve.json
