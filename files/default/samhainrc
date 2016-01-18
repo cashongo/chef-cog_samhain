@@ -149,6 +149,7 @@ file = /etc
 
 [IgnoreAll]
 file = /etc/ld.so.cache~
+dir = -1/etc/datahub/logs
 
 #
 # --------- /boot -----------
