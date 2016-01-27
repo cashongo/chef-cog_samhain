@@ -1,3 +1,6 @@
+# 0.2.1
+- exclude chef-client php and npm caches from /etc
+
 # 0.2.0
 - update Samhain to 4.1.2
 - update config for datahub
