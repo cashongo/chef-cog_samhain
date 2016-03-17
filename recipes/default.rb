@@ -89,12 +89,14 @@ end
 service "samhain" do
   service_name "samhain"
   action [:enable, :start]
+  not_if { ENV.has_key?('SAMHAIN_NOSTART') }
 end
 
 execute "reload-samhain" do
   action :nothing
   command '/usr/local/sbin/samhain reload'
   returns [0,7]
+  not_if { ENV.has_key?('SAMHAIN_NOSTART') }
 end
 
 file "rebuild_samhain" do
