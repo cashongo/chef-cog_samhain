@@ -1,3 +1,6 @@
+# 0.2.2
+- Add environment variable that can disable samhain start
+
 # 0.2.1
 - exclude chef-client php and npm caches from /etc
 
