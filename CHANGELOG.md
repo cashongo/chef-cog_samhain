@@ -1,3 +1,6 @@
+# 0.2.3
+- Exclude /etc/datahub/s3-local directory
+
 # 0.2.2
 - Add environment variable that can disable samhain start
 
