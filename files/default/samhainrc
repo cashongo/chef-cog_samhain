@@ -150,6 +150,7 @@ file = /etc
 [IgnoreAll]
 file = /etc/ld.so.cache~
 dir = -1/etc/datahub/logs
+dir = -1/etc/datahub/s3-local
 dir = -1/etc/sv/chef-client/.cache
 dir = -1/etc/sv/chef-client/.npm
 
