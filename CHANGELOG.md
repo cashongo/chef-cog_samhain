@@ -1,3 +1,6 @@
+# 0.3.0
+- Samhain version 4.1.4
+
 # 0.2.3
 - Exclude /etc/datahub/s3-local directory
 
