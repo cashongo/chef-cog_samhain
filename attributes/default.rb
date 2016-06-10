@@ -1,4 +1,4 @@
-default['cog_samhain']['samhain_version']  = '4.1.2'
+default['cog_samhain']['samhain_version']  = '4.1.4'
 
 case node['platform_family']
 when 'rhel'
