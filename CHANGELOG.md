@@ -1,3 +1,6 @@
+# 0.3.2
+- Samhain version 4.2.0
+
 # 0.3.1
 - Samhain version 4.1.5
 
