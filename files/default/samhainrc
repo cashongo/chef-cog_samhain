@@ -280,10 +280,12 @@ dir = 99/var/log
 file = /var/log/*.[0-9].gz
 file = /var/log/*.[0-9].log
 file = /var/log/*.[0-9]
+file = /var/log/*.log
 file = /var/log/*.old
 file = /var/log/*/*.[0-9].gz
 file = /var/log/*/*.[0-9][0-9].gz
 file = /var/log/*/*.log.[0-9]
+file = /var/log/*/*.log
 
 [Misc]
 #
