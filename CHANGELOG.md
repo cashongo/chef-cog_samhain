@@ -1,3 +1,6 @@
+# 0.3.3
+- /var/log/nginx/error.log should be handled as logfile
+
 # 0.3.2
 - Samhain version 4.2.0
 
