@@ -1,3 +1,6 @@
+# 0.4.1
+- fix tag/version mismatch
+
 # 0.3.3
 - /var/log/nginx/error.log should be handled as logfile
 
